@@ -59,10 +59,10 @@
             padding: 20px 20px;
             border: 1px solid #b3b3b3;
         }
-
+/*
         .formula-declaration {
             margin-bottom: 80px;
-        }
+        }*/
 
         .formula-notice ol {
             margin: 15px;
@@ -168,27 +168,36 @@
 <body>
 
 <!-- HEADER -->
-<div id="header_wrap" class="outer">
-    <header class="inner">
+        <div id="header_wrap" class=".wrapper" style="height:106px">
+            <header class="header_content" style="top:0px;text-align:center;">
+                <div class="wrapper clearfix" style="margin:auto;">
 
-        <h1 id="project_title">Kity Formula</h1>
+                    <!-- Logo Start -->
+                    <a id="logo" href="#" class="left clearfix">
+                        <img class="default" src="images/logo1.png" alt="Kityforumula log">
+                    </a>
+                    <!-- Logo End -->
 
-        <h2 id="project_tagline">HTML(SVG)数学公式呈现库</h2>
+                    <!-- Menu Start -->
 
-    </header>
-    <div class="nav">
-        <ul>
-            <li><a href="/kityformula/">首页</a></li>
-            <li><a href="getting-started.html">Getting started</a></li>
-            <li><a href="list.html">支持列表</a></li>
-            <li><a href="editor.html">公式编辑器</a></li>
-            <li class="selected"><a href="latex.html">LaTeX解析器</a></li>
-            <li><a href="wiki-eg.html">应用示例</a></li>
-        </ul>
-    </div>
-</div>
+                    <div id="nav" class="clearfix left" >
+                        <ul id="main_menu" class="clearfix top-menu">
+                            <li class="selected left"><a href="index.html"><span>首页</span></a></li>
+                            <li class="left"><a href="getting-started.html"><span>Getting started</span></a></li>
+                            <li class="left"><a href="list.html"><span>支持列表</span></a></li>
+                            <li class="left"><a href="editor.html"><span>公式编辑器</span></a></li>
+                            <li class="left"><a href="latex.html"><span>LaTeX解析器</span></a></li>
+                            <li class="left"><a href="wiki-eg.html"><span>应用示例</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- Menu End -->
 
-<!-- MAIN CONTENT -->
+                </div>
+            </header>
+        </div>
+        <!--Header End -->
+
+        <!-- MAIN CONTENT -->
 <div id="main_content_wrap" class="outer">
     <section id="main_content" class="inner">
         <!-- 公式资源 -->
@@ -206,12 +215,13 @@
         <div class="formula-declaration">
             <div class="formula-notice">
                 <h1>Latex 解析器使用说明：</h1>
-                <ol>
-                    <li>在“LaTeX表达式”文本框中输入LaTeX语法的表达式，你也可以通过点击输入框右下角的“选取预设表达式”按钮选取LaTeX表达式， 也可以通过“公式可视化编辑”进行可视化编辑。</li>
-                    <li>在你输入符合LaTeX语法的公式后，Kity Formula会自动在“公式渲染结果”里绘制出公式。</li>
-                </ol>
+                <p id="noticeContent">
+                    在“LaTeX表达式”文本框中输入LaTeX语法的表达式，你也可以通过点击输入框右下角的“选取预设表达式”按钮选取LaTeX表达式， 也可以通过“公式可视化编辑”进行可视化编辑。
+                    在你输入符合LaTeX语法的公式后，Kity Formula会自动在“公式渲染结果”里绘制出公式。
+                </p>
             </div>
         </div>
+</div>
 
         <div class="latex-input-wrap">
             <label for="latexInput">LaTeX表达式：</label>

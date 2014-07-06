@@ -15,113 +15,122 @@
 </head>
 
 <body>
-
 <!-- HEADER -->
-<div id="header_wrap" class="outer">
-    <header class="inner">
+        <div id="header_wrap" class=".wrapper" style="height:106px">
+            <header class="header_content" style="top:0px;text-align:center;">
+                <div class="wrapper clearfix" style="margin:auto;">
 
-        <h1 id="project_title">Kity Formula</h1>
+                    <!-- Logo Start -->
+                    <a id="logo" href="#" class="left clearfix">
+                        <img class="default" src="images/logo1.png" alt="Kityforumula log">
+                    </a>
+                    <!-- Logo End -->
 
-        <h2 id="project_tagline">HTML(SVG)数学公式呈现库</h2>
-    </header>
-    <div class="nav">
-        <ul>
-            <li><a href="/kityformula/">首页</a></li>
-            <li><a href="getting-started.html">Getting started</a></li>
-            <li class="selected"><a href="list.html">支持列表</a></li>
-            <li><a href="editor.html">公式编辑器</a></li>
-            <li><a href="latex.html">LaTeX解析器</a></li>
-            <li><a href="wiki-eg.html">应用示例</a></li>
-        </ul>
-    </div>
-</div>
+                    <!-- Menu Start -->
 
-<!-- MAIN CONTENT -->
-<div id="main_content_wrap" class="outer">
-    <section id="main_content" class="inner">
-        <link rel="stylesheet" href="stylesheets/list.css">
-        <script src="lib/kitygraph.all.min.js"></script>
-        <script src="lib/kity-formula.all.min.js"></script>
-        <script src="lib/sea-debug.js"></script>
-        <script src="javascripts/list.js"></script>
-        <script src="javascripts/start.js"></script>
+                    <div id="nav" class="clearfix left" >
+                        <ul id="main_menu" class="clearfix top-menu">
+                            <li class="selected left"><a href="index.html"><span>首页</span></a></li>
+                            <li class="left"><a href="getting-started.html"><span>Getting started</span></a></li>
+                            <li class="left"><a href="list.html"><span>支持列表</span></a></li>
+                            <li class="left"><a href="editor.html"><span>公式编辑器</span></a></li>
+                            <li class="left"><a href="latex.html"><span>LaTeX解析器</span></a></li>
+                            <li class="left"><a href="wiki-eg.html"><span>应用示例</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- Menu End -->
 
-        <div>
-            <p>
-                Kity Formula当前支持的所有表达式一览表
-            </p>
+                </div>
+            </header>
         </div>
-        <div class="demo-container">
-            <h2>基本字符集<em>（可由键盘直接输入字符）</em></h2>
+        <!--Header End -->
 
-            <div class="box">
+        <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer" >
+        <section id="main_content" class="inner" style=“margin-top:120px">
+            <link rel="stylesheet" href="stylesheets/list.css">
+            <script src="lib/kitygraph.all.min.js"></script>
+            <script src="lib/kity-formula.all.min.js"></script>
+            <script src="lib/sea-debug.js"></script>
+            <script src="javascripts/list.js"></script>
+            <script src="javascripts/start.js"></script>
+
+            <div>
                 <p>
-                    默认文本， 构造类： kf.TextExpression( char );
+                    Kity Formula当前支持的所有表达式一览表
                 </p>
-                <div id="baseCharset" class="base-charset-container"></div>
+            </div>
+            <div class="demo-container">
+                <h2>基本字符集<em>（可由键盘直接输入字符）</em></h2>
+
+                <div class="box">
+                    <p>
+                        默认文本， 构造类： kf.TextExpression( char );
+                    </p>
+                    <div id="baseCharset" class="base-charset-container"></div>
+                </div>
+
+                <h2>罗马字符集<em>（可由键盘直接输入字符）</em></h2>
+
+                <div class="box">
+                    <p>
+                        罗马字体文本， 构造类： kf.RomanTextExpression( char );
+                    </p>
+                    <div id="romanCharset" class="roman-charset-container"></div>
+                </div>
+
+                <h2>希腊字符集<em class="note">（需要通过转义代码输入字符）</em></h2>
+
+                <div class="box">
+                    <p>
+                        希腊文本， 构造类： kf.TextExpression( charCode );
+                    </p>
+                    <div id="greekCharset" class="greek-charset-container"></div>
+                </div>
+
+                <h2>符号集</h2>
+
+                <div class="box">
+                    <p>
+                        符号， 构造类： kf.TextExpression( symbolCode );
+                    </p>
+                    <div id="symbol" class="symbol-container"></div>
+                </div>
+
+                <h2>常用表达式列表</h2>
+
+                <div id="commonExpressionsContainer"></div>
+
+                <h2>关系表达式 —— 比较操作符</h2>
+
+                <div class="box">
+                    <div id="compare" class="compare-container"></div>
+                </div>
+
+                <h2>关系表达式 —— 集合操作符</h2>
+
+                <div class="box">
+                    <div id="set" class="set-container"></div>
+                </div>
+
+                <h2>关系表达式 —— 逻辑操作符</h2>
+
+                <div class="box">
+                    <div id="logical" class="logical-container"></div>
+                </div>
+
+                <h2>关系表达式 —— 否定操作符</h2>
+
+                <div class="box">
+                    <div id="notExp" class="notExp-container"></div>
+                </div>
+
+                <h2>复合公式示例</h2>
+
+                <div id="complex"></div>
             </div>
 
-            <h2>罗马字符集<em>（可由键盘直接输入字符）</em></h2>
-
-            <div class="box">
-                <p>
-                    罗马字体文本， 构造类： kf.RomanTextExpression( char );
-                </p>
-                <div id="romanCharset" class="roman-charset-container"></div>
-            </div>
-
-            <h2>希腊字符集<em class="note">（需要通过转义代码输入字符）</em></h2>
-
-            <div class="box">
-                <p>
-                    希腊文本， 构造类： kf.TextExpression( charCode );
-                </p>
-                <div id="greekCharset" class="greek-charset-container"></div>
-            </div>
-
-            <h2>符号集</h2>
-
-            <div class="box">
-                <p>
-                    符号， 构造类： kf.TextExpression( symbolCode );
-                </p>
-                <div id="symbol" class="symbol-container"></div>
-            </div>
-
-            <h2>常用表达式列表</h2>
-
-            <div id="commonExpressionsContainer"></div>
-
-            <h2>关系表达式 —— 比较操作符</h2>
-
-            <div class="box">
-                <div id="compare" class="compare-container"></div>
-            </div>
-
-            <h2>关系表达式 —— 集合操作符</h2>
-
-            <div class="box">
-                <div id="set" class="set-container"></div>
-            </div>
-
-            <h2>关系表达式 —— 逻辑操作符</h2>
-
-            <div class="box">
-                <div id="logical" class="logical-container"></div>
-            </div>
-
-            <h2>关系表达式 —— 否定操作符</h2>
-
-            <div class="box">
-                <div id="notExp" class="notExp-container"></div>
-            </div>
-
-            <h2>复合公式示例</h2>
-
-            <div id="complex"></div>
-        </div>
-
-    </section>
+        </section>
     <div id="goToTop" class="go-to-top"><a href="#"></a></div>
 </div>
 
